@@ -1,0 +1,12 @@
+{
+  "name": "dsl-generated dependencies",
+  "dependencies": {
+    "underscore": "latest",
+    "angular": "latest",
+    "angular-full": "latest",
+    "angular-ui-router": "latest"
+  },
+  "resolutions": {
+    "angular": "1.3.15"
+  }
+}

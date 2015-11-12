@@ -1,0 +1,35 @@
+{
+  "name": "angular-full",
+  "version": "1.4.7",
+  "main": "./angular.js",
+  "description": "Angular with their additional modules",
+  "keywords": [
+    "angular",
+    "angular-full",
+    "angular complete",
+    "angular latest",
+    "angular-animate",
+    "angular-aria",
+    "angular-cookies",
+    "angular-loader",
+    "angular-messages",
+    "angular-mocks",
+    "angular-resource",
+    "angular-route",
+    "angular-sanitize",
+    "angular-scenario",
+    "angular-touch"
+  ],
+  "ignore": [],
+  "dependencies": {},
+  "homepage": "https://github.com/josep-rc/angular-full",
+  "_release": "1.4.7",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.4.7",
+    "commit": "0ebacf47ecd459f00546373202a8e69e585a5bb5"
+  },
+  "_source": "git://github.com/josep-rc/angular-full.git",
+  "_target": "*",
+  "_originalSource": "angular-full"
+}
