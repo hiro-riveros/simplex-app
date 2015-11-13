@@ -1,44 +1,48 @@
 <section>
-	
+  
 <h2>formulario simplex</h2>
-<table>
-	<tr>
-		<td>funncion objetivo</td>
-		<% (1..@variables).each do |variable| %>
-				<td>
-					<input type="text" name="restrictions">x<%= variable%>
-				</td>
-			<% end %> 
-	</tr>
-	</table>
-	<br>
-	<table>
-	<% (1..@restrictions).each do |restriction| %>
-		<tr>
-			<% (1..@variables).each do |variable| %>
-				<td>
-					<input type="text" name="variable_<%= variable%>">x<%= variable%>
-				</td>
-				<% if variable == @variables%>
-				<td>
-					<select name="option" id="">
-						<option value="1" selected><=</option>
-						<option value="1">=></option>
-						<option value="1">=</option>
-					</select>
-				</td>
-				<td>
-					 <input type="text" name="result"> 
-				</td>
-				<% end %>
-			<% end %>
-		</tr>
-			
-	<% end %> 
 
-</table>
-<button type="submit"> calcular </button>
+<form action="/simplex/solution" method="post">
+  <table>
+    <tr>
+      <td>funcion objetivo</td>
+      <% (1..@variables).each do |variable| %>
+        <td>
+          <input type="text" name="objectives_<%= variable%>">x<%= variable%>
+        </td>
+      <% end %> 
+      <input type="hidden" name="variables" id="variables" value="<%= @variables %>">
+    </tr>
+  </table>
+  <br>
+  <table>
+    <% (1..@restrictions).each do |restriction| %>
+      <tr>
+        <% (1..@variables).each do |variable| %>
+          <td>
+            <input type="text" name="values_<%= restriction%>_<%= variable%>">x<%= variable%>
+          </td>
+          <% if variable == @variables%>
+          <td>
+            <select name="option" id="">
+              <option value="1" selected><=</option>
+              <option value="1">=></option>
+              <option value="1">=</option>
+            </select>
+          </td>
+          <td>
+             <input type="text" name="results_<%= restriction%>"> 
+          </td>
+          <% end %>
+        <% end %>
+        <input type="hidden" name="restrictions" id="restrictions" value="<%= @restrictions %>">
+      </tr>
+        
+    <% end %> 
 
+  </table>
+  <button type="submit"> calcular </button>
+</form>
 
 
 </section>

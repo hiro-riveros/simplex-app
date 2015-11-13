@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
   post '/simplex/index' => 'simplex#index'
+  post '/simplex/solution' => 'simplex#solution'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
