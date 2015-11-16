@@ -1,29 +1,24 @@
-<style>
-	.hidden {
-		display: none;
-	}
-</style>
-<section ng-app="pato">
+<section ng-app="pato" class="">
 	<h1>simplex program</h1>
 
-	<form action="/simplex/index" method="post">
+	<form action="/simplex/index" method="post" class="form-contaier">
  
-		<div>
-			<select name="objective">
+		<div class="form-group">
+			<select name="objective" class="form-control">
 				<option value="1" selected>maximizar</option>
 				<option value="2">minimizar</option>
 			</select>
 		</div>
-		<div>
+		<div class="form-group">
 			<label for="">cantidad de variables</label>
-			<input type="text" id="variables" name="variables">
+			<input type="text" id="variables" name="variables" class="form-control">
 		</div>
 		<br>
-		<div>
+		<div class="form-group">
 			<label for="">cantidad de restricciones</label>
-			<input type="text" id="restrictions" name="restrictions">
+			<input type="text" id="restrictions" name="restrictions" class="form-control">
 		</div>
 		<br>
-		<button class="btn btn-primary btn-xs" type="submit">generar formulario</button>
+		<button class="btn btn-primary btn-block" type="submit">generar formulario</button>
 	</form>
 </section>

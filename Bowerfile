@@ -2,5 +2,6 @@ asset 'underscore'
 asset 'angular'
 asset 'angular-full'
 asset 'angular-ui-router'
+asset 'bootstrap'
 
 resolution 'angular', '1.3.15'

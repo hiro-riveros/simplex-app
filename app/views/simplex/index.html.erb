@@ -5,43 +5,49 @@
 <form action="/simplex/solution" method="post">
   <table>
     <tr>
-      <td>funcion objetivo</td>
+      <td>
+        <h5>funcion objetivo</h5>
+      </td>
       <% (1..@variables).each do |variable| %>
-        <td>
-          <input type="text" name="objectives_<%= variable%>">x<%= variable%>
+        <td class="form-group" colspan="5">
+            <input type="text" name="objectives_<%= variable%>" class="form-control">x<%= variable%>
         </td>
       <% end %> 
-      <input type="hidden" name="variables" id="variables" value="<%= @variables %>">
+      <div class="form-group">
+        <input type="hidden" name="variables" id="variables" value="<%= @variables %>" class="form-control">
+      </div>
     </tr>
   </table>
   <br>
-  <table>
+  <table class="table table-condensed">
     <% (1..@restrictions).each do |restriction| %>
       <tr>
         <% (1..@variables).each do |variable| %>
-          <td>
-            <input type="text" name="values_<%= restriction%>_<%= variable%>">x<%= variable%>
+          <td class="form-group" colspan="5">
+            <input type="text" name="values_<%= restriction%>_<%= variable%>" class="form-control">x<%= variable%>
           </td>
           <% if variable == @variables%>
-          <td>
-            <select name="option" id="">
+          <td class="form-group">
+            <select name="option" id="" class="form-control">
               <option value="1" selected><=</option>
               <option value="1">=></option>
               <option value="1">=</option>
             </select>
           </td>
-          <td>
-             <input type="text" name="results_<%= restriction%>"> 
+          <td class="form-group">
+             <input type="text" name="results_<%= restriction%>" class="form-control"> 
           </td>
           <% end %>
         <% end %>
-        <input type="hidden" name="restrictions" id="restrictions" value="<%= @restrictions %>">
+        <div class="form-group">
+          <input type="hidden" name="restrictions" id="restrictions" value="<%= @restrictions %>" class="form-control">
+        </div>
       </tr>
         
     <% end %> 
 
   </table>
-  <button type="submit"> calcular </button>
+  <button type="submit" class="btn btn-primary btn-block"> calcular </button>
 </form>
 
 

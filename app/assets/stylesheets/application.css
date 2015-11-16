@@ -12,4 +12,15 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap/css/bootstrap
+ *= require bootstrap/css/bootstrap-theme
  */
+
+.form-contaier {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.form-control {
+	margin-right: 30px;
+}

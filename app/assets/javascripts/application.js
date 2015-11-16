@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-
+//= require bootstrap/js/bootstrap
 //= require angular/angular
 
 //= require turbolinks
